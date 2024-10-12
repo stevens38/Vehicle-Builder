@@ -7,7 +7,7 @@ import Wheel from './Wheel.js';
 // TODO: The properties should include vin, color, make, model, year, weight, top speed, and wheels
 // TODO: The types should be as follows: vin (string), color (string), make (string), model (string), year (number), weight (number), topSpeed (number), wheels (Wheel[])
 
-class Motorbike {
+class Motorbike extends Vehicle {
   vin: string;
   color: string;
   make: string;
@@ -32,7 +32,6 @@ class Motorbike {
     topSpeed: number,
     wheels: Wheel[],
   ) {
-
     super();
     this.vin = vin;
     this.color = color;
@@ -47,6 +46,7 @@ class Motorbike {
     } else {
       this.wheels = wheels;
     }
+  }
     // TODO: Implement the wheelie method
     // TODO: The method should log the message "Motorbike [make] [model] is doing a wheelie!"
     wheelie(): void {
@@ -67,8 +67,8 @@ class Motorbike {
       console.log(`Color: ${this.color}`);
       console.log(`Wheels: ${this.wheels.length}`);
     }
+  }
 
-    
 
-// Export the Motorbike class as the default export
-export default Motorbike;
+    // Export the Motorbike class as the default export
+    export default Motorbike;
