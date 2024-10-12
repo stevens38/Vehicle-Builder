@@ -32,7 +32,8 @@ class Truck extends Vehicle implements AbleToTow {
     weight: number,
     topSpeed: number,
     wheels: Wheel[],
-    towingCapacity: number,) {
+    towingCapacity: number,
+  ) {
     super();
     this.vin = vin;
     this.color = color;
@@ -60,33 +61,31 @@ class Truck extends Vehicle implements AbleToTow {
       console.log(`The make and model of the vehicle is: ${vehicle.make} ${vehicle.model}`);
     } else {
       console.log('The make and modle are not available');
-    
+
     } if (vehicle.weight <= this.towingCapacity) {
       console.log(`Vehicle ${vehicle.make} ${vehicle.model} is being towed`);
     } else {
       console.log(`Vehicle ${vehicle.make} ${vehicle.model} is too heavy to be towed`);
     }
-    
-      }
+
   }
 
-  
   // TODO: Override the printDetails method from the Vehicle class
   override printDetails(): void {
-  // TODO: The method should call the printDetails method of the parent class
-  super.printDetails();
-  // TODO: The method should log the details of the Truck
-  // TODO: The details should include the VIN, make, model, year, weight, top speed, color, towing capacity, and wheels
-  console.log(`VIN: ${this.vin}`);
-  console.log(`Color: ${this.color}`);
-  console.log(`Make: ${this.make}`);
-  console.log(`Model: ${this.model}`);
-  console.log(`Year: ${this.year}`);
-  console.log(`Weight: ${this.weight} lbs`);
-  console.log(`Top Speed: ${this.topSpeed} mph`);
-  console.log(`Towing Capacity: ${this.towingCapacity} lbs`);
-  console.log(`Wheels: ${this.wheels}`);
+    // TODO: The method should call the printDetails method of the parent class
+    super.printDetails();
+    // TODO: The method should log the details of the Truck
+    // TODO: The details should include the VIN, make, model, year, weight, top speed, color, towing capacity, and wheels
+    console.log(`VIN: ${this.vin}`);
+    console.log(`Color: ${this.color}`);
+    console.log(`Make: ${this.make}`);
+    console.log(`Model: ${this.model}`);
+    console.log(`Year: ${this.year}`);
+    console.log(`Weight: ${this.weight} lbs`);
+    console.log(`Top Speed: ${this.topSpeed} mph`);
+    console.log(`Towing Capacity: ${this.towingCapacity} lbs`);
+    console.log(`Wheels: ${this.wheels}`);
+  }
 }
-
 // Export the Truck class as the default export
 export default Truck;
